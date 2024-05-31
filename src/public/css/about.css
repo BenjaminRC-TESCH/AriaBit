@@ -1,0 +1,97 @@
+/*Diseño de las tarjetas de presentacion*/
+
+.body-about {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+.selecction {
+    border-bottom: 2px solid#fff;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    margin: 40px;
+    border: 1px #fff solid;
+}
+
+.card .content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+
+}
+
+.card .content .img {
+    height: 50%;
+    margin-bottom: 20px;
+}
+
+.card .content .img img {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.card .content h4 {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.card .content h6 {
+    font-size: 13px;
+    color: #000;
+}
+
+.card .content p {
+    font-size: 13px;
+    color: #000;
+    margin-top: 10px;
+}
+
+.card .content .icon-f img {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    width: 20px;
+}
+
+.card {
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+}
+
+@media only screen and (max-width: 700px) {
+    .body-about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cardb {
+        margin-top: 20%;
+    }
+}

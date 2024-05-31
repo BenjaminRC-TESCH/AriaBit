@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/"><span class="text-warning">Aria</span>Bit</a> <button
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"
+            type="button"><span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/shop">Productos</a>
+                </li>
+
+                <!--               <li class="nav-item">
+                    <a class="nav-link" href="/pruebas">Pruebas</a>
+                </li>-->
+
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="#Carrito"><img src="/icon/Shopping cart.png" alt="shopping cart"></a>
+                </li>-->
+
+                {{#if user}}
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Admin Products</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/products">Todos los Productos</a></li>
+                        <li><a class="dropdown-item" href="/products/add">Agregar Productos</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a class="dropdown-item" href="/category">Todos las cateogrias</a></li>
+                        <li><a class="dropdown-item" href="/category/add">Agregar Categoria</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Admin Users</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/users">Todos los Usuarios</a></li>
+                        <li><a class="dropdown-item" href="/users/add">Agregar Usuarios</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a class="dropdown-item" href="/employees">Todos los empleados</a></li>
+                        <li><a class="dropdown-item" href="/employees/add">Agregar empleado</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a class="dropdown-item" href="/position">Todos los roles</a></li>
+                        <li><a class="dropdown-item" href="/position/add">Agregar rol</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <!--Fragmento cuando la sesion este iniciada-->
+                    <a class="nav-link dropdown-toggle" href="#Registrate" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"><img src="/icon/user.png" alt="user" class="nav-item-user"></a>
+                    <ul class="dropdown-menu">
+                        <!--<li><a class="dropdown-item" href="/profile">Perfil</a></li>
+                        <div class="dropdown-divider"></div>-->
+                        <li><a class="dropdown-item" href="/auth/logout">Logout</a></li>
+                    </ul>
+                </li>
+
+                {{else}}
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" href="#Registrate" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"><img src="/icon/user.png" alt="user" class="nav-item-user"></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/auth/signup">Registrate</a></li>
+                        <li><a class="dropdown-item" href="/auth/signin">Inicia</a></li>
+
+                    </ul>
+                </li>
+                {{/if}}
+
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,48 @@
+<form action="/products/edit/{{product._id}}?_method=PUT" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="_method" value="PUT" />
+    <div class="container d-flex justify-content-center align-items-center min-vh-100 ">
+
+        <div class="col-md-6 border rounded-5 p-3 bg-white shadow">
+            <div class="row align-items-center">
+                <div class="header-text mb-4">
+                    <h2>Editar Productos</h2>
+                    <p>Ingresa los nuevos datos del producto</p>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-lg bg-light fs-6" required placeholder="Nombre"
+                        name="name" value="{{product.name}}">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-lg bg-light fs-6" required
+                        placeholder="Descripción" name="description" value="{{product.description}}">
+
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control form-control-lg bg-light fs-6" required
+                        placeholder="Precio" name="price" value="{{product.price}}">
+                </div>
+
+                <div class="input-group mb-3">
+                    <select class="form-select form-control-lg bg-light fs-6" required name="type">
+                        {{#each categories}}
+                        <option value="{{description}}">{{description}}</option>
+                        {{/each}}
+
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="file" class="form-control form-control-lg bg-light fs-6" required placeholder="Imagen"
+                        name="image">
+
+                    <div class="input-group mb-3">
+                        <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Agregar Producto</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+</form>

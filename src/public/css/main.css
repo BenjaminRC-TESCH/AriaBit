@@ -1,0 +1,27 @@
+.nav-item img {
+    width: 25px;
+    height: 25px;
+}
+
+.nav-item .nav-item-user {
+    width: 25px;
+    height: 22px;
+}
+
+.custom-alert {
+    margin-top: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.alert-error {
+    margin-top: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}

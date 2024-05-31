@@ -1,0 +1,31 @@
+<!-- product cards -->
+<div class="container" id="product-cards">
+
+
+    <div class="row" style="margin-top: 30px;">
+
+
+        {{#each products}}
+        <div class="col-md-3 py-3 py-md-0">
+            <div class="card-shop animated-card">
+                <img src="/uploads/{{image}}" class="img-fluid rounded mx-auto d-block" style="height: 200px;">
+                <div class="card-body">
+                    <h3>{{name}}</h3>
+                    <p>{{description}}</p>
+                    <h5>$ {{price}}</h5>
+                    <input type="hidden" name="id_producto_carrito" value="">
+                    <input type="hidden" name="nombre_producto_carrito" value="">
+                    <input type="hidden" name="precio_producto_carrito" value="">
+                    <button type="button" class="btn btn-dark btn-rounded">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        {{/each}}
+
+
+    </div>
+
+
+</div>
+<!-- product cards -->

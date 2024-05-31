@@ -1,0 +1,20 @@
+<div class="container" id="product-cards">
+    <div class="row" style="margin-top: 30px;">
+        {{#each category}}
+        <div class="col-md-3 py-3 py-md-0">
+            <div class="card-shop animated-card">
+                <div class="card-body">
+                    <h3>{{description}}</h3>
+                    <input type="hidden" name="id_producto_carrito" value="">
+                    <a class="btn btn-primary btn-rounded" href="/category/edit/{{_id}}">Editar</a>
+                    <form action="/category/delete/{{_id}}?_method=DELETE" method="POST"
+                        class="form-check form-check-inline">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="btn btn-danger btn-rounded">Eliminar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

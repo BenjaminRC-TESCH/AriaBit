@@ -1,0 +1,57 @@
+<form action="/employees/edit/{{employees._id}}?_method=PUT" method="POST">
+    <input type="hidden" name="_method" value="PUT" />
+    <div class="container d-flex justify-content-center align-items-center min-vh-100 ">
+
+        <div class="col-md-6 border rounded-5 p-3 bg-white shadow">
+            <div class="row align-items-center">
+                <div class="header-text mb-4">
+                    <h2>Editar empleado</h2>
+                    <p>Ingresa los nuevos datos del empleado</p>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-lg bg-light fs-6" required placeholder="Nombre"
+                        name="first_name" value="{{employees.first_name}}">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-lg bg-light fs-6" required
+                        placeholder="Apellidos" name="last_name" value="{{employees.last_name}}">
+
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-lg bg-light fs-6" required
+                        placeholder="Dirección" name="address" value="{{employees.address}}">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-lg bg-light fs-6" required
+                        placeholder="Telefono" name="phone" value="{{employees.phone}}">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-lg bg-light fs-6" required placeholder="Email"
+                        name="email" value="{{employees.email}}">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-lg bg-light fs-6" required
+                        placeholder="Contraseña" name="password" value="{{employees.password}}">
+                </div>
+
+                <div class="input-group mb-3">
+                    <select class="form-select form-control-lg bg-light fs-6" required name="position">
+                        {{#each position}}
+                        <option value="{{description}}">{{description}}</option>
+                        {{/each}}
+
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+                    <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Guardar</button>
+                </div>
+
+            </div>
+        </div>
+</form>

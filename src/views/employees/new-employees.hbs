@@ -1,0 +1,55 @@
+<form action="/employees/new-employees" method="post">
+    <div class="container d-flex justify-content-center align-items-center min-vh-100 ">
+
+        <div class="col-md-6 border rounded-5 p-3 bg-white shadow">
+            <div class="row align-items-center">
+                <div class="header-text mb-4">
+                    <h2>Agregar nuevos empleados</h2>
+                    <p>Ingresa los datos del empleado</p>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-lg bg-light fs-6" required placeholder="Nombre"
+                        name="first_name">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-lg bg-light fs-6" required
+                        placeholder="Apellidos" name="last_name">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-lg bg-light fs-6" required
+                        placeholder="Dirección" name="address">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control form-control-lg bg-light fs-6" required
+                        placeholder="Telefono" name="phone">
+                </div>
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control form-control-lg bg-light fs-6" required placeholder="Email"
+                        name="email">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control form-control-lg bg-light fs-6" required
+                        placeholder="Contraseña" name="password">
+                </div>
+
+                <div class="input-group mb-3">
+                    <select class="form-select form-control-lg bg-light fs-6" required name="position">
+
+                        {{#each position}}
+                        <option value="{{description}}">{{description}}</option>
+                        {{/each}}
+
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+                    <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Agregar Empleado</button>
+                </div>
+
+            </div>
+        </div>
+</form>
